@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useTheme } from './context/ThemeContext';
+import CalendarComponent from './components/Calendar';
 
-function App() {
+const App = () => {
+  const { darkMode, toggleTheme } = useTheme();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}>
+      <header className="flex justify-between p-4">
+        <h1 className="text-2xl">First Calendar</h1>
+        <button onClick={toggleTheme} className="p-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
+          Toggle Theme
+        </button>
       </header>
+      <CalendarComponent />
     </div>
   );
-}
+};
+
+// const App = () => {
+//   return <h1>Hello, World!</h1>;
+// };
 
 export default App;
