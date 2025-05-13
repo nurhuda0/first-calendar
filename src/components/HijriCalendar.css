@@ -1,0 +1,29 @@
+/* Custom styling for Hijri calendar */
+.hijri-theme .react-calendar {
+    background-color: #f8f9fa;
+    border-color: #34d399;
+  }
+  
+  .hijri-theme .react-calendar__tile--active {
+    background-color: #34d399;
+    color: white;
+  }
+  
+  .hijri-theme .react-calendar__month-view__days__day--weekend {
+    color: #065f46;
+  }
+  
+  .hijri-theme .react-calendar__navigation button {
+    color: #065f46;
+  }
+  
+  .hijri-theme .react-calendar__navigation button:enabled:hover,
+  .hijri-theme .react-calendar__navigation button:enabled:focus {
+    background-color: #a7f3d0;
+  }
+  
+  .hijri-date-tile {
+    font-size: 0.7rem;
+    margin-top: 2px;
+  }
+  
